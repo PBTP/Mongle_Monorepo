@@ -1,0 +1,63 @@
+@import '@/styles/theme.scss';
+
+.ReservationCardWrapper {
+  padding: 16px;
+  background-color: $white;
+  border-radius: 2px;
+  > .ReservationCardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    > .ReservationStatusWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      > .ReservationStatusLine {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .ReservationDday {
+          border-radius: 30px;
+          background-color: $gray100;
+          color: $primary;
+          font-size: 11px;
+          font-weight: 500;
+          padding: 4px 8px;
+        }
+        .ReservationStatusText {
+          color: $primary;
+          font-size: 11px;
+          font-weight: 500;
+          &.Gray {
+            color: $gray400;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 예약자 전화번호 및 문자
+.ReservationInfo {
+  display: flex;
+  gap: 16px;
+}
+
+.ReservationPetInfo {
+  color: $black;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ReservationLocation {
+  color: $gray400;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ReservationDate {
+  color: $primary;
+  font-size: 15px;
+  font-weight: 600;
+}
