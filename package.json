@@ -1,24 +1,18 @@
 {
-  "name": "Mongle-monorepo",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "mg-wb": "turbo dev --filter=mg-wb",
+    "mg-bs": "turbo dev --filter=mg-bs"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
+    "eslint": "^8.57.0",
     "prettier": "^3.2.5",
-    "turbo": "latest"
+    "turbo": "^2.1.1"
   },
-  "engines": {
-    "node": ">=18"
-  },
-  "packageManager": "yarn@4.1.1",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "packageManager": "pnpm@8.15.6",
+  "name": "with-vite"
 }

@@ -1,0 +1,53 @@
+@import '@/styles/theme.scss';
+
+.TitleWrapper {
+  width: 100%;
+  display: grid;
+  align-items: center;
+
+  > .TitleContainer {
+    display: flex;
+    align-items: center;
+
+    > .Title {
+      color: $gray700;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+  }
+
+  > .SubLabel {
+    justify-self: end;
+  }
+}
+
+.LabelRequire {
+  display: flex;
+  margin-left: 8px;
+  align-items: center;
+
+  > .LabelRequireText {
+    color: $primary;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  > .CheckIcon {
+    stroke: $primary;
+  }
+}
+
+.Description {
+  color: $gray400;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  margin-top: 8px;
+}
+
+.Content {
+  input {
+    width: 100%;
+  }
+}
