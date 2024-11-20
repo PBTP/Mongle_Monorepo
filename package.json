@@ -2,6 +2,8 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "build:wb": "turbo build --filter=mg-wb",
+    "build:bs": "turbo build --filter=mg-bs",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
