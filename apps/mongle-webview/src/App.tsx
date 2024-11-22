@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { RootRouter } from './router/RootRouter';
 import { setUserAuth } from './stores/useAuthStore';
 import { showiOSInfo, webviewInit } from './webview/utils';
+import { ErrorBoundary } from 'react-error-boundary';
 
 if (!window.handleIosWebviewToken) {
   window.handleIosWebviewToken = (token, uuid) => {
@@ -19,7 +20,10 @@ function App() {
     webviewInit();
   }, []);
 
-  return <RootRouter />;
+  return;
+  <ErrorBoundary>
+    <RootRouter />;
+  </ErrorBoundary>;
 }
 
 export default App;

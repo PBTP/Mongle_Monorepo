@@ -27,6 +27,11 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src"],
+  "include": [
+    "src",
+    "../../packages/ui/icons/icon",
+    "../../packages/ui/icons/logo",
+    "../../packages/ui/icons/types.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
