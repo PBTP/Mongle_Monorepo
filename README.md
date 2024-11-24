@@ -40,3 +40,17 @@
  ┣ 📄 pnpm-workspace.yaml
  ┗ 📄 turbo.json
 </pre>
+
+## 🚀 실행 방법
+
+### 패키지 설치
+    pnpm install
+
+### 실행
+
+Webview 앱 실행 (Next.js)
+
+    pnpm run:mg-wb
+Business 앱 실행 (Vite)
+
+    pnpm run:mg-bs
