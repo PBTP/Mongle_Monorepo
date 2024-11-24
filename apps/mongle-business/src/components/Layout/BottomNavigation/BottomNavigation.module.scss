@@ -1,0 +1,47 @@
+@import '@/styles/theme.scss';
+
+.BottomNavigationWrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #fff;
+  border-top: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+
+  .NavItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: $gray400;
+    padding: 10px 20px;
+    transition: color 0.3s all;
+    font-weight: 500;
+    .BottomIcon {
+      font-size: 24px;
+    }
+
+    .BottomLabel {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    &:hover {
+      color: #000;
+    }
+
+    &.active {
+      color: $black;
+
+      .icon,
+      .label {
+        color: inherit;
+      }
+    }
+  }
+}
