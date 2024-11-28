@@ -1,8 +1,8 @@
 import Button from '@/components/ui/common/Button/Button';
 import ContentField from '@/components/ui/common/ContentField/ContentField';
 import { SearchIcon } from '@/components/ui/icons/icon';
-import { SearchAddressJuso } from '@/hooks/api/types/address';
-import { useAddress, useCoordinate } from '@/hooks/api/useAddress';
+import { SearchAddressJuso } from '@/services/types/address';
+import { useAddress, useCoordinate } from '@/services/queries/useAddress';
 import { useDebounce } from '@/hooks/useDebounce';
 import useOutsideClick from '@/hooks/useOutsideClick';
 import { foramtSearchWord } from '@/utils/format';

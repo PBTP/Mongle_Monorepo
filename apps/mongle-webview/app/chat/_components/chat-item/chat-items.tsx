@@ -1,4 +1,4 @@
-import { ChatRoom } from '@/hooks/api/types/chat';
+import { ChatRoom } from '@/services/types/chat';
 import ChatItem from './chat-item';
 
 interface ChatRoomItemsProps {

@@ -1,5 +1,5 @@
 import EditIcon from '@/components/ui/icons/icon/EditIcon';
-import { ChatRoom } from '@/hooks/api/types/chat';
+import { ChatRoom } from '@/services/types/chat';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import ChatRoomItems from '../chat-item/chat-items';

@@ -2,7 +2,7 @@ import ArrowLeftTailIcon from '@/components/ui/icons/icon/ArrowLeftTail';
 import React, { useState } from 'react';
 
 import Button from '@/components/ui/common/Button/Button';
-import { ChatRoom } from '@/hooks/api/types/chat';
+import { ChatRoom } from '@/services/types/chat';
 import ChatRoomItems from '../chat-item/chat-items';
 import styles from './chat-list-edit.module.scss';
 
