@@ -1,6 +1,8 @@
 import '@/styles/global.scss';
 import type { Metadata } from 'next';
 import Providers from './provider';
+import AuthProvider from './auth-provider';
+import { cookies } from 'next/headers';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -14,10 +16,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const cookieStore = cookies();
+  const cookieValue = cookieStore.get('AUTH')?.value;
   return (
     <html lang="ko">
       <body>
-        <Providers>{children}</Providers>
+        <AuthProvider authCookie={cookieValue ?? ''}>
+          <Providers>{children}</Providers>
+        </AuthProvider>
       </body>
     </html>
   );
