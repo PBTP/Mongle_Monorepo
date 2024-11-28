@@ -1,6 +1,6 @@
-import { searchAddress, searchCoordinate } from '@/hooks/api/services/address';
 import { useQuery } from '@tanstack/react-query';
-import { ReqSearchAddress, ReqSearchCoordinate } from './types/address';
+import { ReqSearchAddress, ReqSearchCoordinate } from '../types/address';
+import { searchAddress, searchCoordinate } from '../api/address';
 
 export const useAddress = ({
   keyword,

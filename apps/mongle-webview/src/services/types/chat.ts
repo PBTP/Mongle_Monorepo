@@ -17,9 +17,9 @@ export interface ChatRoom {
 
 export interface ReqChatRoomMessages {
   chatRoomId: string;
-  cursor?: number;
-  limit?: number;
-  next?: number;
+  cursor?: string;
+  limit?: string;
+  next?: string;
 }
 
 export interface ChatUser {
