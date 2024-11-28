@@ -1,5 +1,5 @@
 import ChatContainer from './_components/chat-container';
 
-export default function ChatsPage() {
+export default function ChatPage() {
   return <ChatContainer />;
 }
