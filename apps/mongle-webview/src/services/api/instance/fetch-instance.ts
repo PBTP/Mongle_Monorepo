@@ -10,6 +10,13 @@ const createApi = (serverToken?: string) => {
       ...fetchOptions
     } = options;
 
+    if (fetchOptions.body && !fetchOptions.method) {
+      fetchOptions.method = 'POST';
+      if (typeof fetchOptions.body === 'object') {
+        fetchOptions.body = JSON.stringify(fetchOptions.body);
+      }
+    }
+
     const queryParams = params
       ? '?' + new URLSearchParams(params).toString()
       : '';
