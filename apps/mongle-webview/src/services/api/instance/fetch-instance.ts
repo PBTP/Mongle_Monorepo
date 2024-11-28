@@ -2,11 +2,7 @@ import { getUserAuth } from '@/stores/useAuthStore';
 import { ApiClientOptions, ApiResponse } from '../../types/instance';
 import { ApiError } from './api-error';
 
-interface CreateApiConfig {
-  serverToken?: string;
-}
-
-const createApi = (config: CreateApiConfig = {}) => {
+const createApi = (serverToken?: string) => {
   return async <T>(url: string, options: ApiClientOptions = {}): Promise<T> => {
     const {
       baseUrl = process.env.NEXT_PUBLIC_API_URL,
@@ -18,7 +14,7 @@ const createApi = (config: CreateApiConfig = {}) => {
       ? '?' + new URLSearchParams(params).toString()
       : '';
     const fullUrl = `${baseUrl}${url}${queryParams}`;
-    const token = config.serverToken || getUserAuth().accessToken;
+    const token = serverToken || getUserAuth().accessToken;
 
     const headers = new Headers({
       'Content-Type': 'application/json',

@@ -2,7 +2,7 @@ import { ChatMessages, ChatRoom, ReqChatRoomMessages } from '../types/chat';
 import createApi from './instance/fetch-instance';
 
 const createChatApi = (serverToken?: string) => {
-  const api = createApi({ serverToken });
+  const api = createApi(serverToken);
 
   return {
     fetchChatRooms: (): Promise<ChatRoom[]> => api<ChatRoom[]>('/v1/chat/room'),
