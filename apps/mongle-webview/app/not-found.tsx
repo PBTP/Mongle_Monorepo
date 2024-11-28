@@ -2,6 +2,14 @@
 
 import ErrorPage from '@/pagesss/Error/ErrorPage';
 
-export default function NotFound() {
-  return <ErrorPage type="notFound" />;
+interface NotFoundProps {
+  searchParams: {
+    status: 'notFound' | 'error';
+  };
+}
+
+export default function NotFound({ searchParams }: NotFoundProps) {
+  const status = searchParams.status ?? 'notFound';
+
+  return <ErrorPage type={status} />;
 }
