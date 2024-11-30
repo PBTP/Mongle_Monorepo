@@ -58,16 +58,16 @@ const createApi = (serverToken?: string) => {
 
       return responseData as T;
     } catch (error) {
+      console.error('ERROR', fullUrl);
       if (error instanceof ApiError) {
         console.error(error.message);
-        throw error;
+        throw new ApiError(error);
       }
-      if (error instanceof Error) {
-        console.error('ERROR', fullUrl);
-        console.error(error.message);
-        throw error;
-      }
-      throw new Error('An unknown error occurred');
+      throw new ApiError({
+        message:
+          error instanceof Error ? error.message : 'An unknown error occurred',
+        status: 500,
+      });
     }
   };
 };
