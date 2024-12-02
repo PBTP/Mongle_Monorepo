@@ -21,7 +21,7 @@ const createApi = (serverToken?: string) => {
       ? '?' + new URLSearchParams(params).toString()
       : '';
     const fullUrl = `${baseUrl}${url}${queryParams}`;
-    const token = serverToken || getUserAuth().accessToken;
+    const token = serverToken ? serverToken : getUserAuth().accessToken;
 
     const headers = new Headers({
       'Content-Type': 'application/json',
