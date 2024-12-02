@@ -1,7 +1,7 @@
 import RadioActiveIcon from '@/components/ui/icons/icon/RadioActiveIcon';
 import RadioIcon from '@/components/ui/icons/icon/RadioIcon';
 import { ErrorLogoIcon } from '@/components/ui/icons/logo';
-import { ChatRoom } from '@/hooks/api/types/chat';
+import { ChatRoom } from '@/services/types/chat';
 import { formatChatDate } from '@/utils/format';
 import { ReactNode, createContext } from 'react';
 import styles from './chat-item.module.scss';

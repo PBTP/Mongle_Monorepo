@@ -1,7 +1,7 @@
-import { ChatMessage } from '@/hooks/api/types/chat';
-import { useChatRoomMessages } from '@/hooks/api/useChat';
-import { useSocket } from '@/hooks/socket/useSocket';
+import { ChatMessage } from '@/services/types/chat';
+import { useSocket } from '@/hooks/useSocket';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useChatRoomMessages } from '@/services/queries/useChat';
 
 /**
  *

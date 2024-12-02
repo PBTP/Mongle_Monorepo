@@ -11,6 +11,7 @@ function makeQueryClient() {
         staleTime: 60 * 1000,
         refetchOnMount: false,
         refetchOnWindowFocus: false,
+        retry: false,
       },
       dehydrate: {
         shouldDehydrateQuery: (query) =>

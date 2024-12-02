@@ -1,4 +1,4 @@
-import { JusoBase, SearchCoordinateJuso } from '@/hooks/api/types/address';
+import { JusoBase, SearchCoordinateJuso } from '@/services/types/address';
 
 export const sendAddressFromWebview = (
   address: string,

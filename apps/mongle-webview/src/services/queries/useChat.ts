@@ -1,16 +1,15 @@
 import { useQuery, useSuspenseQuery } from '@tanstack/react-query';
-import { fetchChatRoomMessages, fetchChatRooms } from './services/chat';
-import { ReqChatRoomMessages } from './types/chat';
 import { chatKeys } from './keys/chat';
+import { ReqChatRoomMessages } from '../types/chat';
+import chatApi from '../api/chat';
 
 export const useChatRooms = (token: string) => {
   return useSuspenseQuery({
-    queryKey: ['chatRooms', token],
+    queryKey: chatKeys.chatRoomsKey(token),
     queryFn: () => {
-      const res = fetchChatRooms();
+      const res = chatApi.fetchChatRooms();
       return res;
     },
-    retry: 0,
   });
 };
 
@@ -20,7 +19,7 @@ export const useChatRoomMessages = (params: ReqChatRoomMessages) => {
     queryFn: async ({ queryKey }) => {
       const queryKeyParamsIndex = 1;
       const reqChatRoomMessages = queryKey[queryKeyParamsIndex];
-      const res = await fetchChatRoomMessages(reqChatRoomMessages);
+      const res = await chatApi.fetchChatRoomMessages(reqChatRoomMessages);
       return res;
     },
   });
