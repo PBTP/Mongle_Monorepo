@@ -44,7 +44,8 @@ const createApi = (serverToken?: string) => {
       const responseData: ApiResponse<T> = {
         data: parsedResponse?.data,
         message: parsedResponse?.message || 'SUCCESS',
-        status: response.status,
+        statusCode: parsedResponse?.statusCode || response.status,
+        secretMessage: parsedResponse?.secretMessage,
       };
 
       if (!response.ok) {
@@ -52,7 +53,7 @@ const createApi = (serverToken?: string) => {
         console.error(responseData.message);
         throw new ApiError({
           message: responseData.message || 'API request failed',
-          status: responseData.status,
+          statusCode: responseData.statusCode,
         });
       }
 
@@ -66,7 +67,7 @@ const createApi = (serverToken?: string) => {
       throw new ApiError({
         message:
           error instanceof Error ? error.message : 'An unknown error occurred',
-        status: 500,
+        statusCode: 500,
       });
     }
   };

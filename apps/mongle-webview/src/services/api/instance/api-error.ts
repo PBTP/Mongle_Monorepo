@@ -1,15 +1,15 @@
 interface ApiErrorProps {
   message: string;
-  status: number;
+  statusCode: number;
 }
 
 export class ApiError extends Error {
   name: string;
-  status: number;
+  statusCode: number;
 
-  constructor({ message, status }: ApiErrorProps) {
+  constructor({ message, statusCode }: ApiErrorProps) {
     super(message);
     this.name = 'ApiError';
-    this.status = status;
+    this.statusCode = statusCode;
   }
 }

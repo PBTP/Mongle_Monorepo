@@ -9,5 +9,6 @@ export interface ApiClientOptions extends Omit<RequestInit, 'method'> {
 export interface ApiResponse<T> {
   message: string;
   data?: T;
-  status: number;
+  statusCode: number;
+  secretMessage?: string;
 }
