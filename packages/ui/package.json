@@ -5,7 +5,9 @@
     ".": "./index.ts",
     "./counter": "./components/counter.ts",
     "./header": "./components/header.tsx",
-    "./setup-counter": "./utils/counter.ts"
+    "./setup-counter": "./utils/counter.ts",
+    "./styles.css": "./styles/globals.css",
+    "./components/*": "./components/*"
   },
   "license": "MIT",
   "scripts": {
@@ -14,7 +16,20 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@shadcn/ui": "^0.0.4",
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8.57.0",
+    "postcss": "^8.4.49",
+    "shadcn-ui": "^0.9.3",
+    "tailwindcss": "^3.4.15",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.2",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.2",
+    "vaul": "^0.9.9"
   }
 }
