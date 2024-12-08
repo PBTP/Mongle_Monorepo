@@ -6,9 +6,9 @@ import chatApi from '../api/chat';
 export const useChatRooms = (token: string) => {
   return useSuspenseQuery({
     queryKey: chatKeys.chatRoomsKey(token),
-    queryFn: () => {
-      const res = chatApi.fetchChatRooms();
-      return res;
+    queryFn: async () => {
+      const res = await chatApi.fetchChatRooms();
+      return res.data;
     },
   });
 };
@@ -20,7 +20,7 @@ export const useChatRoomMessages = (params: ReqChatRoomMessages) => {
       const queryKeyParamsIndex = 1;
       const reqChatRoomMessages = queryKey[queryKeyParamsIndex];
       const res = await chatApi.fetchChatRoomMessages(reqChatRoomMessages);
-      return res;
+      return res.data;
     },
   });
 };
