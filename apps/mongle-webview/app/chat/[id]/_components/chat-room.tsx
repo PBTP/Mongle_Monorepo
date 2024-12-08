@@ -59,7 +59,7 @@ const ChatRoom = ({ chatRoomId, storeName }: ChatRoomProps) => {
     <>
       <div className={styles.ChatRoomHeader}>
         <ArrowLeftTailIcon
-          onClick={() => push('/chat-list')}
+          onClick={() => push('/chat')}
           width={24}
           height={24}
         />
