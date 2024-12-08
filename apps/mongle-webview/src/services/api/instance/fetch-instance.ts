@@ -36,7 +36,6 @@ const createApi = (serverToken?: string) => {
       const response: Response = await fetch(fullUrl, {
         ...fetchOptions,
         headers,
-        credentials: 'same-origin',
       });
 
       const parsedResponse = await response.json();
