@@ -1,6 +1,4 @@
-'use client';
-
-import Location from '@/pagesss/Location/Location/Location';
+import Location from './_components/location';
 
 const LocationPage = () => {
   return <Location />;

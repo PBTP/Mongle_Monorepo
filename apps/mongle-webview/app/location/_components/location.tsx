@@ -1,3 +1,4 @@
+'use client';
 import Button from '@/components/ui/common/Button/Button';
 import ContentField from '@/components/ui/common/ContentField/ContentField';
 import { SearchIcon } from '@/components/ui/icons/icon';
@@ -8,7 +9,7 @@ import useOutsideClick from '@/hooks/useOutsideClick';
 import { foramtSearchWord } from '@/utils/format';
 import { sendAddressFromWebview } from '@/webview/address';
 import { useRef, useState } from 'react';
-import styles from './Location.module.scss';
+import styles from './location.module.scss';
 
 const Location = () => {
   const [addressInfo, setAddressInfo] = useState({
@@ -81,14 +82,16 @@ const Location = () => {
     isShowSearchWrapper &&
     !isSelected;
 
+  const shouldDisplayDetailAddress = isSelected;
+
   const shouldDisplayEmptyDescription = isError;
 
   return (
     <div>
       <ContentField
         ref={LocationSearchWrapperRef}
-        backgroundColor="Gray"
         className={styles.LocationInfoField}
+        border
         onClick={() => setIsShowSearchWrapper(true)}
       >
         <SearchIcon width={24} height={24} className={styles.SearchIcon} />
@@ -121,20 +124,18 @@ const Location = () => {
         )}
       </ContentField>
 
-      <div className={styles.LocationDetailContent}>
-        <div className={styles.LocationDetailHeader}>상세주소</div>
-        <ContentField
-          backgroundColor="Gray"
-          className={styles.LocationDetailAddress}
-        >
-          <input
-            className={styles.LocationDetailAddressInput}
-            placeholder="상세주소"
-            value={detailAddress}
-            onChange={(e) => setDetailAddress(e.target.value)}
-          />
-        </ContentField>
-      </div>
+      {shouldDisplayDetailAddress && (
+        <div className={styles.LocationDetailContent}>
+          <ContentField className={styles.LocationDetailAddress} border>
+            <input
+              className={styles.LocationDetailAddressInput}
+              placeholder="상세주소"
+              value={detailAddress}
+              onChange={(e) => setDetailAddress(e.target.value)}
+            />
+          </ContentField>
+        </div>
+      )}
 
       {shouldDisplayEmptyDescription && (
         <div className={styles.LocationEmptyContent}>
