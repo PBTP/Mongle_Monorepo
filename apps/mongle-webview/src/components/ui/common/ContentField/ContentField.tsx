@@ -4,21 +4,21 @@ import styles from './ContentField.module.scss';
 
 type ContentFieldProps = {
   children: ReactNode;
-  backgroundColor: 'Gray' | 'White';
-  border?: 'Border' | 'None';
+  disabled?: boolean;
+  border?: boolean;
   className?: string;
   onClick?: () => void;
 };
 
 const ContentField = forwardRef<HTMLDivElement, ContentFieldProps>(
   (
-    { children, backgroundColor, border = 'None', className, onClick },
+    { children, disabled = false, border = false, className, onClick },
     ref: ForwardedRef<HTMLDivElement>
   ) => {
     return (
       <div
         ref={ref}
-        className={`${styles.ContentFieldWrapper} ${styles[backgroundColor]} ${styles[border]} ${className}`}
+        className={`${styles.ContentFieldWrapper} ${disabled ? styles.Disabled : ''} ${border ? styles.Border : ''} ${className}`}
         onClick={onClick}
       >
         {children}

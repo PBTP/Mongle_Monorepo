@@ -41,10 +41,7 @@ const Payment = () => {
         <div className={styles.PaymentTooltip}>
           아래 내용이 맞는지 확인해주세요.
         </div>
-        <ContentField
-          className={styles.PaymentInfoContainer}
-          backgroundColor="Gray"
-        >
+        <ContentField className={styles.PaymentInfoContainer} border>
           <div className={styles.PaymentInfoHeader}>개신남 3호점</div>
           <div className={styles.PaymentInfoContent}>
             <div className={styles.PaymentInfoLine}>
@@ -68,10 +65,7 @@ const Payment = () => {
         </div>
         <div className={styles.PaymentRequestInto}>
           <div className={styles.PaymentRequestHeader}>요청사항</div>
-          <ContentField
-            className={styles.PaymentRequestInputWrapper}
-            backgroundColor="Gray"
-          >
+          <ContentField className={styles.PaymentRequestInputWrapper} border>
             <input
               className={styles.PaymentInput}
               placeholder="요청하실 내용을 입력해주세요."

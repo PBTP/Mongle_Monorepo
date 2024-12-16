@@ -1,13 +1,12 @@
 @import '@/styles/theme.scss';
 
 .ContentFieldWrapper {
-  border-radius: 8px;
-  &.Gray {
-    background-color: $gray100;
-  }
+  border-radius: 2px;
+  background-color: $white;
 
-  &.White {
-    background-color: #fff;
+  &.Disabled {
+    background-color: $gray100;
+    pointer-events: none;
   }
 
   &.Border {
@@ -15,7 +14,7 @@
     transition: border 0.3s;
 
     &:focus-within {
-      border: 1px solid $gray1000;
+      border: 1px solid $gray500;
     }
   }
 }
