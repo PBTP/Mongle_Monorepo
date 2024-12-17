@@ -1,5 +1,5 @@
 import { ErrorLogoIcon } from '@/components/ui/icons/logo';
-import styles from './Error.module.scss';
+import styles from './error.module.scss';
 
 interface ErrorProps {
   type?: 'notFound' | 'error';
