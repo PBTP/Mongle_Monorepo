@@ -1,6 +1,4 @@
-'use client';
-
-import Version from '@/pagesss/Version/Version';
+import Version from 'app/version/_components/version';
 
 const VersionPage = () => {
   return <Version />;
