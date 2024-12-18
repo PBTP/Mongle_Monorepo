@@ -8,7 +8,9 @@
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "mg:wb": "turbo dev --filter=mg-wb",
-    "mg:bs": "turbo dev --filter=mg-bs"
+    "mg:bs": "turbo dev --filter=mg-bs",
+    "start:wb": "turbo start --filter=mg-wb",
+    "start:bs": "turbo start --filter=mg-bs"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
