@@ -1,5 +1,5 @@
 import React from 'react';
-import revision from '../../../revision.json';
+import revision from 'revision.json';
 
 const Version = () => {
   return (

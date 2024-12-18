@@ -3,6 +3,9 @@ import type { Metadata } from 'next';
 import Providers from './provider';
 import AuthProvider from './auth-provider';
 import { cookies } from 'next/headers';
+import localFont from 'next/font/local';
+import '@/styles/global.scss';
+import styles from './layout.module.scss';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -10,6 +13,10 @@ export async function generateMetadata(): Promise<Metadata> {
     description: 'Mongle Webview',
   };
 }
+
+const font = localFont({
+  src: '../src/assets/fonts/PretendardVariable.woff2',
+});
 
 export default function RootLayout({
   children,
@@ -19,10 +26,12 @@ export default function RootLayout({
   const cookieStore = cookies();
   const cookieValue = cookieStore.get('AUTH')?.value;
   return (
-    <html lang="ko">
+    <html lang="ko" className={font.className}>
       <body>
         <AuthProvider authCookie={cookieValue ?? ''}>
-          <Providers>{children}</Providers>
+          <main className={styles.Main}>
+            <Providers>{children}</Providers>
+          </main>
         </AuthProvider>
       </body>
     </html>
