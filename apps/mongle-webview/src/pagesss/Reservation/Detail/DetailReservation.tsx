@@ -11,10 +11,7 @@ const DetailReservation = () => {
   // const location = useLocation();
   return (
     <div>
-      <ContentField
-        className={`${styles.EstimatedPriceWrapper}`}
-        backgroundColor="Gray"
-      >
+      <ContentField className={`${styles.EstimatedPriceWrapper}`} border>
         <div className={styles.EstimatedPriceTitle}>나의 결제 예상 금액</div>
         <div className={styles.EstimatedPriceContainer}>
           <div className={styles.EstimatedPrice}>250,000원</div>
@@ -27,7 +24,7 @@ const DetailReservation = () => {
       </ContentField>
       <div className={styles.ReservationWrapper}>
         <div className={styles.Title}>예약 일정</div>
-        <ContentField className={styles.DateContent} backgroundColor="Gray">
+        <ContentField className={styles.DateContent} border>
           <CalendarIcon
             className={styles.CalendarIcon}
             width={18}
@@ -38,11 +35,11 @@ const DetailReservation = () => {
       </div>
       <div className={styles.ParkingInfoWrapper}>
         <div className={styles.Title}>방문 주차 위치</div>
-        <ContentField className={styles.ParkingInfo} backgroundColor="Gray">
+        <ContentField className={styles.ParkingInfo} border>
           <MarkerIcon className={styles.MarkerIcon} width={18} height={18} />
           <div className={styles.Address}>서울시 양천구 목동</div>
         </ContentField>
-        <ContentField className={styles.DetailAddress} backgroundColor="Gray">
+        <ContentField className={styles.DetailAddress} border>
           <input placeholder="상세주소 입력" />
         </ContentField>
       </div>
@@ -60,10 +57,10 @@ const DetailReservation = () => {
       </div>
       <div className={styles.ParentInfoWrapper}>
         <div className={styles.Title}>보호자 연락처</div>
-        <ContentField className={styles.Telecom} backgroundColor="Gray">
+        <ContentField className={styles.Telecom} border>
           <input placeholder="통신사 선택" />
         </ContentField>
-        <ContentField className={styles.Phone} backgroundColor="Gray">
+        <ContentField className={styles.Phone} border>
           <input placeholder="010-0000-0000" />
         </ContentField>
       </div>
@@ -84,10 +81,7 @@ const DetailReservation = () => {
           </Button>
         </div>
         {/* 없을때 */}
-        <ContentField
-          backgroundColor="Gray"
-          className={styles.PetInfoContainer}
-        >
+        <ContentField border className={styles.PetInfoContainer}>
           <div className={styles.PetPhoto}>강아지사진</div>
           <div className={styles.PetInfoBox}>
             <div className={styles.PetNameLine}>
@@ -107,11 +101,11 @@ const DetailReservation = () => {
           </div>
         </ContentField>
         <div className={styles.HealthWrapper}>
-          <ContentField backgroundColor="Gray" className={styles.HealthInfo}>
+          <ContentField border className={styles.HealthInfo}>
             <div className={styles.Type}>성향 체크</div>
             <div className={styles.Status}>완료</div>
           </ContentField>
-          <ContentField backgroundColor="Gray" className={styles.HealthInfo}>
+          <ContentField border className={styles.HealthInfo}>
             <div className={styles.Type}>접종 및 건강</div>
             <div className={styles.Status}>완료</div>
           </ContentField>
