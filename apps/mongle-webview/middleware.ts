@@ -15,8 +15,8 @@ export async function middleware(request: NextRequest) {
   const cookieStore = cookies();
   const cookieValue = cookieStore.get('AUTH')?.value;
 
-  if (!cookieValue) {
-    return NextResponse.redirect(new URL('/error', request.url));
-  }
+  // if (!cookieValue) {
+  //   return NextResponse.redirect(new URL('/error', request.url));
+  // }
   return NextResponse.next();
 }
