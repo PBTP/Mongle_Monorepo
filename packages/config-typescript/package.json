@@ -1,5 +1,6 @@
 {
   "name": "@mgmg/typescript-config",
+  "main": "tsconfig.base.json",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
