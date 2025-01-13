@@ -1,9 +1,11 @@
 {
-  "extends": "@mgmg/typescript-config/tsconfig.base.json",
+  "extends": "../config-typescript/tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@mgmg/*": ["./*"]
+      "@mgmg/ui": ["."],
+      "@mgmg/ui/utils": ["./lib/utils"],
+      "@mgmg/ui/*": ["./*"]
     }
   },
   "include": ["."],

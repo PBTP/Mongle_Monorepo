@@ -3,3 +3,7 @@
 
 // components
 export { Header } from './header';
+export { Button } from './ui/button';
+
+// utils
+export { cn } from './lib/utils';
