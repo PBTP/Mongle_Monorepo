@@ -1,8 +1,11 @@
 {
+  "extends": "@mgmg/typescript-config/tsconfig.base.json",
   "compilerOptions": {
-    "jsx": "react"
+    "baseUrl": ".",
+    "paths": {
+      "@mgmg/*": ["./*"]
+    }
   },
-  "extends": "@repo/typescript-config/base.json",
   "include": ["."],
   "exclude": ["node_modules"]
 }
