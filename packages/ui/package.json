@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "exports": {
     ".": "./index.ts",
-    "./counter": "./components/counter.ts",
-    "./header": "./components/header.tsx",
     "./setup-counter": "./utils/counter.ts",
-    "./button": "./ui/button.tsx",
-    "./utils": "./lib/utils.ts"
+    "./utils": "./lib/utils.ts",
+    "./global/styles": "./global.css",
+    "./tailwind": "./tailwind.config.ts",
+    "./ui": "./ui/index.ts"
   },
   "license": "MIT",
   "scripts": {

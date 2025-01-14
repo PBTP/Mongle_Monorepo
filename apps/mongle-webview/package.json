@@ -13,8 +13,8 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
-    "@radix-ui/react-slot": "^1.1.0",
     "@mgmg/ui": "workspace:*",
+    "@radix-ui/react-slot": "^1.1.0",
     "@tanstack/react-query": "^5.28.4",
     "@tanstack/react-query-devtools": "^5.60.2",
     "@types/qs": "^6.9.15",
@@ -38,7 +38,7 @@
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
     "@types/js-cookie": "^3",
-    "@types/node": "^20.11.26",
+    "@types/node": "^20.16.5",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^7.0.2",

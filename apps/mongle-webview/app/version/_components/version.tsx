@@ -1,4 +1,5 @@
-import { Button } from '@mgmg/ui';
+'use client';
+import { Button } from '@mgmg/ui/ui';
 import React from 'react';
 import revision from 'revision.json';
 const Version = () => {

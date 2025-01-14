@@ -1,4 +1,4 @@
-import Version from 'app/version/_components/version';
+import Version from '@app/version/_components/version';
 
 const VersionPage = () => {
   return <Version />;
