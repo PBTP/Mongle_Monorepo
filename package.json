@@ -1,4 +1,5 @@
 {
+  "name": "@mgmg/workspace",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -13,10 +14,10 @@
     "start:bs": "turbo start --filter=mg-bs"
   },
   "devDependencies": {
+    "@types/node": "^22.10.6",
     "eslint": "^8.57.0",
     "prettier": "^3.2.5",
     "turbo": "^2.1.1"
   },
-  "packageManager": "pnpm@8.15.6",
-  "name": "with-vite"
+  "packageManager": "pnpm@8.15.6"
 }

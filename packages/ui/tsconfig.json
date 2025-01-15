@@ -1,8 +1,13 @@
 {
+  "extends": "../config-typescript/tsconfig.base.json",
   "compilerOptions": {
-    "jsx": "react"
+    "baseUrl": ".",
+    "paths": {
+      "@mgmg/ui": ["."],
+      "@mgmg/ui/utils": ["./lib/utils"],
+      "@mgmg/ui/*": ["./*"]
+    }
   },
-  "extends": "@repo/typescript-config/base.json",
   "include": ["."],
   "exclude": ["node_modules"]
 }

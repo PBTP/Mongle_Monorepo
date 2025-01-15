@@ -1,6 +1,9 @@
 // utils
-export { setupCounter } from "./utils/counter";
+// export { setupCounter } from '../lib/utils/counter';
 
 // components
-export { Header } from "./components/header";
-export { Counter } from "./components/counter";
+export { Header } from './header';
+export { Button } from './ui/button';
+
+// utils
+export { cn } from './lib/utils';

@@ -1,4 +1,3 @@
-import '@/styles/global.scss';
 import type { Metadata } from 'next';
 import Providers from './provider';
 import AuthProvider from './auth-provider';
@@ -6,6 +5,7 @@ import { cookies } from 'next/headers';
 import localFont from 'next/font/local';
 import '@/styles/global.scss';
 import styles from './layout.module.scss';
+import '@mgmg/ui/global/styles';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {

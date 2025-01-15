@@ -1,4 +1,6 @@
 {
+  "css.validate": false,
+  "tailwindCSS.validate": true,
   "eslint.workingDirectories": [
     {
       "mode": "auto"
