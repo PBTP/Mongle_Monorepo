@@ -2,8 +2,7 @@
 // export { setupCounter } from '../lib/utils/counter';
 
 // components
-export { Header } from './header';
-export { Button } from './ui/button';
+export * from './ui';
 
 // utils
 export { cn } from './lib/utils';

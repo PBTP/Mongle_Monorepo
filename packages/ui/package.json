@@ -6,7 +6,7 @@
     "./setup-counter": "./utils/counter.ts",
     "./utils": "./lib/utils.ts",
     "./global/styles": "./global.css",
-    "./tailwind": "./tailwind.config.ts",
+    "./tailwind": "./tailwind/tailwind.config.ts",
     "./ui": "./ui/index.ts"
   },
   "license": "MIT",
