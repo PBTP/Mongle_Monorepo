@@ -1,4 +1,5 @@
 import { Config } from 'tailwindcss';
+import { typography } from './typography';
 const config: Config = {
   darkMode: ['class'],
   content: ['./ui/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}'],
@@ -8,6 +9,9 @@ const config: Config = {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
+      },
+      fontSize: {
+        ...typography,
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -20,8 +24,18 @@ const config: Config = {
           DEFAULT: 'hsl(var(--popover))',
           foreground: 'hsl(var(--popover-foreground))',
         },
+        text: {
+          primary: 'var(--text-primary)',
+          black: 'var(--text-black)',
+          secondary: 'var(--text-secondary)',
+          third: 'var(--text-third)',
+          muted: 'var(--text-muted)',
+          destructive: 'var(--text-destructive)',
+          white: 'var(--text-white)',
+          warning: 'var(--text-warning)',
+        },
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
+          DEFAULT: 'var(--primary)',
           foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {
