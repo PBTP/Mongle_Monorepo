@@ -1,5 +1,5 @@
 import { DeleteXIcon } from '@/components/ui/icons/icon';
-import styles from './ReviewInfo.module.scss';
+import styles from './review-info.module.scss';
 
 /**
  * 해당 정보는 추후에 props로 받아서 반려동물 정보를 보여준다.

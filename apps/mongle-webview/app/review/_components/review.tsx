@@ -1,13 +1,16 @@
-import ReviewInfo from '@/components/ReviewInfo/ReviewInfo';
+'use client';
 import Button from '@/components/ui/common/Button/Button';
 import CameraIcon from '@/components/ui/icons/icon/CameraIcon';
 import { useEffect, useState } from 'react';
-import styles from './Review.module.scss';
+import styles from './review.module.scss';
+import { ReviewData } from '@/services/types/review';
+import ReviewInfo from './review-info';
 
 const ReviewPage = () => {
   const [step, setStep] = useState<'SURVEY' | 'REVIEW'>('SURVEY');
   // review data 형식을 모르기 떄문에 any 선언
-  const [reviewData, setReviewData] = useState<any>({
+  // TODO: 타입 정의 필요 기존 코드에서 text: string 이였기에 일단 해당 타입 사용
+  const [reviewData, setReviewData] = useState<ReviewData>({
     text: '',
   });
   const initialButtonStates = new Array(8).fill('Survey');
@@ -23,7 +26,7 @@ const ReviewPage = () => {
 
   const handleReivewText = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const { name, value } = event.target;
-    setReviewData((prevData: any) => ({
+    setReviewData((prevData: ReviewData) => ({
       ...prevData,
       [name]: value,
     }));
