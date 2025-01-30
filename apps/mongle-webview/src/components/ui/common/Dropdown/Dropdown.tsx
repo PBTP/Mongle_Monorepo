@@ -1,3 +1,4 @@
+'use client';
 import { ArrowDownNoTail } from '@/components/ui/icons/icon';
 import useOutsideClick from '@/hooks/useOutsideClick';
 import React, {

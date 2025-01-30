@@ -1,9 +1,7 @@
-'use client';
-
-import ReviewIndexPage from '@/pagesss/Review/Review';
+import Review from './_components/review';
 
 const ReviewPage = () => {
-  return <ReviewIndexPage />;
+  return <Review />;
 };
 
 export default ReviewPage;

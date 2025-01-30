@@ -1,6 +1,4 @@
-'use client';
-
-import Payment from '@/pagesss/Payment/Payment/Payment';
+import Payment from './_components/payment';
 
 const PaymentPage = () => {
   return <Payment />;

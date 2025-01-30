@@ -1,10 +1,7 @@
-'use client';
-
-import ReservationIndexPage from '@/pagesss/Reservation/Index/Index';
-
+import Reservation from './_components/reservation';
 
 const ReservationPage = () => {
-  return <ReservationIndexPage />;
+  return <Reservation />;
 };
 
 export default ReservationPage;

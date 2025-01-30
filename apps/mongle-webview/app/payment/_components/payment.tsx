@@ -1,10 +1,10 @@
+'use client';
 import Button from '@/components/ui/common/Button/Button';
 import ContentField from '@/components/ui/common/ContentField/ContentField';
-import Divider from '@/components/ui/common/Divider/Divider';
 import Dropdown from '@/components/ui/common/Dropdown/Dropdown';
+import Divider from '@/components/ui/common/Divider/Divider';
 import { useState } from 'react';
-import PaymentLoading from '../PaymentLoading/PaymentLoading';
-import styles from './Payment.module.scss';
+import styles from './payment.module.scss';
 
 const Payment = () => {
   const cardMethods = ['국민은행', '신한은행', '우리은행', '기업은행'];
@@ -30,12 +30,7 @@ const Payment = () => {
     }));
   };
 
-  //결제 api 붙이면 react-query에서 가져와야함
-  const isLoading = false;
-
-  return isLoading ? (
-    <PaymentLoading />
-  ) : (
+  return (
     <div className={styles.PaymentWrapper}>
       <section className={styles.PaymentInfoWrapper}>
         <div className={styles.PaymentTooltip}>

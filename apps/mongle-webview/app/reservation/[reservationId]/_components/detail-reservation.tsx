@@ -5,7 +5,7 @@ import {
   CheckboxIcon,
   MarkerIcon,
 } from '@/components/ui/icons/icon';
-import styles from './DetailReservation.module.scss';
+import styles from './detail-reservation.module.scss';
 
 const DetailReservation = () => {
   // const location = useLocation();
