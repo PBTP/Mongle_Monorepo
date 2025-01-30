@@ -1,5 +1,4 @@
-'use client';
-import DetailReservation from '@/pagesss/Reservation/Detail/DetailReservation';
+import DetailReservation from './_components/detail-reservation';
 
 const ReservationDetailPage = () => {
   return <DetailReservation />;
