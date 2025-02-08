@@ -1,3 +1,4 @@
+'use client';
 import ArrowLeftTailIcon from '@/components/ui/icons/icon/ArrowLeftTail';
 import React, { useState } from 'react';
 

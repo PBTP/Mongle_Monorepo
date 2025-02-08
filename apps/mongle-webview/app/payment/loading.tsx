@@ -1,5 +1,4 @@
-import React from 'react';
-import styles from './PaymentLoading.module.scss';
+import styles from './payment-loading.module.scss';
 
 const PaymentLoading = () => {
   return (

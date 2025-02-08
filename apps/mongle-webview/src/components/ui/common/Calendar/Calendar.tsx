@@ -1,3 +1,4 @@
+'use client';
 import { ArrowRightIcon } from '@/components/ui/icons/icon';
 import { tileClassName } from '@/utils/date';
 import { Value } from 'node_modules/react-calendar/dist/cjs/shared/types';
