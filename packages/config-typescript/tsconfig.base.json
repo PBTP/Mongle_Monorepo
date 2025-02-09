@@ -31,7 +31,8 @@
       "@mgmg/ui/*": ["../../packages/ui/*"],
       "@mgmg/lib/*": ["../../packages/ui/lib/*"],
       "@mgmg/hooks/*": ["../../packages/ui/lib/hooks/*"],
-      "@mgmg/utils/*": ["../../packages/ui/lib/*"]
+      "@mgmg/utils/*": ["../../packages/ui/lib/*"],
+      "@mgmg/components/*": ["../../packages/ui/components/*"]
     }
   },
   // Storybook

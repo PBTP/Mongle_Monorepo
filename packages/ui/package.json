@@ -3,11 +3,10 @@
   "version": "0.0.0",
   "exports": {
     ".": "./index.ts",
-    "./setup-counter": "./utils/counter.ts",
-    "./utils": "./lib/utils.ts",
+    "./lib/utils": "./lib/utils.ts",
     "./global/styles": "./global.css",
     "./tailwind": "./tailwind/tailwind.config.ts",
-    "./ui": "./ui/index.ts"
+    "./components/ui": "./components/ui/index.ts"
   },
   "license": "MIT",
   "scripts": {
@@ -29,11 +28,13 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.436.0",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^1.1.2"
   }
 }
