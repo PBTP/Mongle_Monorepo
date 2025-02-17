@@ -8,7 +8,7 @@
     "./tailwind": "./tailwind/tailwind.config.ts",
     "./components/ui": "./components/ui/index.ts",
     "./components/custom": "./components/custom/index.ts",
-    "./components/icons": "./components/icons/icon/index.ts",
+    "./components/icons": "./components/icons/index.ts",
     "./assets/icon/*": "./assets/icon/*"
   },
   "license": "MIT",

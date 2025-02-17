@@ -19,7 +19,9 @@
       "@utils/*": ["./src/utils/*"],
       "@stores/*": ["./src/stores/*"],
       "@types/*": ["./src/types/*"],
-      "@api/*": ["./src/api/*"]
+      "@api/*": ["./src/api/*"],
+      "@mgmg/ui/components/ui": ["../../packages/ui/components/ui/index.ts"],
+      "@mgmg/ui/*": ["../../packages/ui/*"]
     },
     "plugins": [
       {
