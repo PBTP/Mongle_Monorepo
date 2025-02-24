@@ -1,4 +1,4 @@
-import { cn } from '@mgmg/ui/utils';
+import { cn } from '@mgmg/ui/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 import * as React from 'react';
 

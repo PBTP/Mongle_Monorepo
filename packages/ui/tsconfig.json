@@ -4,10 +4,17 @@
     "baseUrl": ".",
     "paths": {
       "@mgmg/ui": ["."],
-      "@mgmg/ui/utils": ["./lib/utils"],
-      "@mgmg/ui/*": ["./*"]
+      "@mgmg/ui/lib/*": ["./lib/*"],
+      "@mgmg/ui/components/ui/*": ["./components/ui/*"],
+      "@mgmg/ui/components/custom/*": ["./components/custom/*"],
+      "@mgmg/ui/components/icons/*": ["./components/icons/icon/*"],
+      "@mgmg/ui/assets/*": ["./assets/*"],
+      "@mgmg/ui/assets/icon/*": ["./assets/icon/*"]
     }
   },
-  "include": ["."],
+  "include": [
+    ".",
+    "types" // types 폴더 추가
+  ],
   "exclude": ["node_modules"]
 }
