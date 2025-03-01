@@ -11,7 +11,8 @@
     "mg:wb": "turbo dev --filter=mg-wb",
     "mg:bs": "turbo dev --filter=mg-bs",
     "start:wb": "turbo start --filter=mg-wb",
-    "start:bs": "turbo start --filter=mg-bs"
+    "start:bs": "turbo start --filter=mg-bs",
+    "storybook": "turbo start --filter=mg-storybook"
   },
   "devDependencies": {
     "@types/node": "^22.10.6",

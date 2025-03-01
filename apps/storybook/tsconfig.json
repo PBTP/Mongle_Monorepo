@@ -1,0 +1,15 @@
+{
+  "extends": "../../packages/config-typescript/tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@mgmg/ui/*": ["../../packages/ui/*"]
+    }
+  },
+  "include": [
+    "stories",
+    ".storybook/**/*"
+  ],
+  "exclude": ["node_modules"]
+}
