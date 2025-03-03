@@ -15,6 +15,7 @@
     --text-destructive: #688edc;
     --text-white: #ffffff;
     --text-warning: #ff6a69;
+    --text-disabled: #ffffff;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
     --primary: #688edc;
@@ -36,6 +37,7 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --disabled: #dbdee2;
   }
   .dark {
     --background: 0 0% 3.9%;

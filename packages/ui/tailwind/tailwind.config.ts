@@ -33,6 +33,7 @@ const config: Config = {
           destructive: 'var(--text-destructive)',
           white: 'var(--text-white)',
           warning: 'var(--text-warning)',
+          disabled: 'var(--text-disabled)',
         },
         primary: {
           DEFAULT: 'var(--primary)',
@@ -54,6 +55,7 @@ const config: Config = {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
         },
+        disabled: 'var(--disabled)',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
