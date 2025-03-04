@@ -17,6 +17,9 @@ const CMCalendar = ({ onDateChange, initialDate }: CMCalendarProps) => {
     initialDate || new Date()
   ); // 현재 날짜로 초기화
 
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
   const onChange = (selectedDate: CalendarSelectedDate) => {
     setDate(selectedDate);
     onDateChange?.(selectedDate);
@@ -31,6 +34,7 @@ const CMCalendar = ({ onDateChange, initialDate }: CMCalendarProps) => {
         next2Label={null} // +1년 & +10년 이동 버튼 숨기기
         prev2Label={null} // -1년 & -10년 이동 버튼 숨기기
         minDetail="year" // 10년단위 년도 숨기기
+        minDate={today}
         tileClassName={tileClassName}
         prevLabel={
           <ArrowRightIcon
