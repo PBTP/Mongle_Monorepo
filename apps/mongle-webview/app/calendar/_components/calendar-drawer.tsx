@@ -14,7 +14,8 @@ import {
 import { CloseIcon } from '@mgmg/ui/components/icons';
 import React, { useState } from 'react';
 import { CalendarSelectedDate } from '@/components/ui/common/Calendar/calendar-type';
-
+import { sendDataToNative } from '@mgmg/native/events';
+import { format } from '@mgmg/lib/utils/date';
 interface CalendarDrawerProps {
   isOpen?: boolean;
   asChild?: React.ReactNode;
@@ -27,7 +28,9 @@ const CalendarDrawer = ({ isOpen = true, asChild }: CalendarDrawerProps) => {
   const disabled = !selectedDate;
 
   const onConfirm = () => {
-    //TODO Native에 날짜 전달
+    if (!selectedDate) return;
+    const formattedDate = format(selectedDate as Date, 'yyyy-MM-dd');
+    sendDataToNative('calendar', { date: formattedDate });
   };
 
   const handleDateChange = (date: CalendarSelectedDate) => {
@@ -36,9 +39,7 @@ const CalendarDrawer = ({ isOpen = true, asChild }: CalendarDrawerProps) => {
 
   return (
     <Drawer open={isOpen}>
-      <DrawerTrigger asChild={!!asChild}>
-        {asChild ? asChild : <Text>날짜 선택</Text>}
-      </DrawerTrigger>
+      <DrawerTrigger asChild={!!asChild}>{asChild && asChild}</DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
           <DrawerTitle className="text-center relative">
