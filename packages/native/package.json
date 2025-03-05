@@ -1,0 +1,12 @@
+{
+  "name": "@mgmg/native",
+  "version": "0.0.0",
+  "exports": {
+    ".": "./index.ts",
+    "./events": "./events.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts\""
+  }
+}
