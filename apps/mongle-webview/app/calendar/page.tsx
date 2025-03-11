@@ -1,7 +1,7 @@
-import CalendarDrawer from './_components/calendar-drawer';
+import Calendar from './_components/calendar';
 
 const CalendarPage = () => {
-  return <CalendarDrawer />;
+  return <Calendar />;
 };
 
 export default CalendarPage;
