@@ -4,7 +4,6 @@ import { tileClassName } from '@/utils/date';
 import { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import './Calendar.module.scss';
 import styles from './Calendar.module.scss';
 import { CalendarSelectedDate } from './calendar-type';
 interface CMCalendarProps {
