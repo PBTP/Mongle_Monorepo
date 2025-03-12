@@ -1,17 +1,27 @@
 'use client';
 import { ArrowRightIcon } from '@/components/ui/icons/icon';
 import { tileClassName } from '@/utils/date';
-import { Value } from 'node_modules/react-calendar/dist/cjs/shared/types';
 import { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import './Calendar.module.scss';
 import styles from './Calendar.module.scss';
-const CMCalendar = () => {
-  const [date, setDate] = useState<Value>(new Date()); // 현재 날짜로 초기화
+import { CalendarSelectedDate } from './calendar-type';
+interface CMCalendarProps {
+  onDateChange?: (date: CalendarSelectedDate) => void;
+  initialDate?: CalendarSelectedDate;
+}
 
-  const onChange = (selectedDate: Value) => {
+const CMCalendar = ({ onDateChange, initialDate }: CMCalendarProps) => {
+  const [date, setDate] = useState<CalendarSelectedDate>(
+    initialDate || new Date()
+  ); // 현재 날짜로 초기화
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const onChange = (selectedDate: CalendarSelectedDate) => {
     setDate(selectedDate);
+    onDateChange?.(selectedDate);
   };
 
   return (
@@ -23,6 +33,7 @@ const CMCalendar = () => {
         next2Label={null} // +1년 & +10년 이동 버튼 숨기기
         prev2Label={null} // -1년 & -10년 이동 버튼 숨기기
         minDetail="year" // 10년단위 년도 숨기기
+        minDate={today}
         tileClassName={tileClassName}
         prevLabel={
           <ArrowRightIcon

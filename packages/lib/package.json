@@ -1,0 +1,16 @@
+{
+  "name": "@mgmg/lib",
+  "version": "0.0.0",
+  "exports": {
+    ".": "./index.ts",
+    "./utils": "./utils/index.ts",
+    "./utils/*": "./utils/*"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts\""
+  },
+  "dependencies": {
+    "date-fns": "^4.1.0"
+  }
+}

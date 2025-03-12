@@ -9,12 +9,13 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-primary text-primary-foreground shadow hover:bg-primary/90',
+        default: 'bg-primary text-text-white shadow hover:bg-primary/90',
         destructive: 'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90',
         outline: 'border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground',
         secondary: 'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
+        disabled: 'pointer-events-none bg-disabled text-text-disabled',
       },
       size: {
         default: 'h-9 px-4 py-2',
@@ -34,12 +35,30 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
+  disabled?: boolean;
+  onClick?: () => void;
+  fullWidth?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  (
+    { className, variant, size, asChild = false, disabled = false, onClick, children, fullWidth = false, ...props },
+    ref
+  ) => {
     const Comp = asChild ? Slot : 'button';
-    return <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />;
+    const fullWidthClass = fullWidth ? 'w-full' : '';
+    const finalVariant = disabled ? 'disabled' : variant;
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant: finalVariant, size, className }), fullWidthClass)}
+        ref={ref}
+        {...props}
+        disabled={disabled}
+        onClick={onClick}
+      >
+        {children}
+      </Comp>
+    );
   }
 );
 Button.displayName = 'Button';
