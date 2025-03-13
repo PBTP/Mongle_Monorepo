@@ -14,7 +14,8 @@
   },
   "include": [
     ".",
-    "types" // types 폴더 추가
+    "types",
+    "**/*.cjs"
   ],
   "exclude": ["node_modules"]
 }
