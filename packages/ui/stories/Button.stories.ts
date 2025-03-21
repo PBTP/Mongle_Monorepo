@@ -4,7 +4,7 @@ import { fn } from '@storybook/test';
 import { Button } from '@mgmg/ui/components/ui/button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-const meta = {
+const meta: Meta<typeof Button> = {
   title: 'UI/Button',
   component: Button,
   parameters: {
@@ -19,7 +19,6 @@ const meta = {
 
   tags: ['autodocs'],
   argTypes: {
-    
     variant: {
         type: 'select',
         options: ['default', 'destructive', 'outline'],
@@ -37,7 +36,7 @@ const meta = {
   },
   args: { onClick: fn() },
 
-} satisfies Meta<typeof Button>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
