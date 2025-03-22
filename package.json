@@ -5,13 +5,15 @@
     "build": "turbo build",
     "build:wb": "turbo build --filter=mg-wb",
     "build:bs": "turbo build --filter=mg-bs",
+    "build:storybook": "turbo build-storybook --filter=@mgmg/ui",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "mg:wb": "turbo dev --filter=mg-wb",
     "mg:bs": "turbo dev --filter=mg-bs",
     "start:wb": "turbo start --filter=mg-wb",
-    "start:bs": "turbo start --filter=mg-bs"
+    "start:bs": "turbo start --filter=mg-bs",
+    "start:storybook": "turbo storybook --filter=@mgmg/ui"
   },
   "devDependencies": {
     "@types/node": "^22.10.6",
