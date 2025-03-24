@@ -1,8 +1,8 @@
 import { Config } from 'tailwindcss';
-import { typography } from './typography';
+import { typography } from './tailwind/typography';
 const config: Config = {
   darkMode: ['class'],
-  content: ['./ui/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}'],
+  content: ['./ui/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}', './stories/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
       borderRadius: {
