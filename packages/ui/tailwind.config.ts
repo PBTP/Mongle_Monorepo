@@ -2,7 +2,11 @@ import { Config } from 'tailwindcss';
 import { typography } from './tailwind/typography';
 const config: Config = {
   darkMode: ['class'],
-  content: ['./ui/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}', './stories/**/*.{js,ts,jsx,tsx,mdx}'],
+  content: [
+    './ui/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './stories/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     extend: {
       borderRadius: {
@@ -14,7 +18,11 @@ const config: Config = {
         ...typography,
       },
       colors: {
-        background: 'hsl(var(--background))',
+        background: {
+          DEFAULT: 'hsl(var(--background))',
+          white: 'var(--background-white)',
+          disabled: 'var(--background-disabled)',
+        },
         foreground: 'hsl(var(--foreground))',
         card: {
           DEFAULT: 'hsl(var(--card))',
@@ -56,7 +64,12 @@ const config: Config = {
           foreground: 'hsl(var(--destructive-foreground))',
         },
         disabled: 'var(--disabled)',
-        border: 'hsl(var(--border))',
+        border: {
+          DEFAULT: 'hsl(var(--border))',
+          gray: 'var(--border-gray)',
+          selected: 'var(--border-selected)',
+          error: 'var(--border-error)',
+        },
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         chart: {
